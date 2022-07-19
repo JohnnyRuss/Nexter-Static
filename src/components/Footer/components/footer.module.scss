@@ -1,0 +1,22 @@
+@use '../../../styles/helpers/helpers' as *;
+
+.footer {
+  background: color('darkBlueColor');
+  color: color('whiteColor');
+  grid-area: 6 / full-start / 7 / full-end;
+  padding: 8rem 0;
+
+  @include respond(tab-portrate) {
+    grid-area: 7 / full-start / 8 / full-end;
+  }
+
+  @include respond(phone) {
+    grid-area: 9 / full-start / 10 / full-end;
+    padding: 6rem 0;
+  }
+
+  .copyright {
+    text-align: center;
+    color: color('greyColor');
+  }
+}

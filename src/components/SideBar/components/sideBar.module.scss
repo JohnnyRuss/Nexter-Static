@@ -1,0 +1,48 @@
+@use '../../../styles/helpers/helpers' as *;
+
+.sideBar {
+  background: color('brownTintColor-2');
+  grid-area: 1 / side-bar-start / -1 / side-bar-end;
+  @include flexBox;
+  @include flexProperty(center, flex-start);
+
+  @include respond(tab-portrate) {
+    grid-area: 1 / 1 / 2 / -1;
+    @include flexProperty(flex-end, center);
+  }
+
+  %btnHold {
+    height: 0.2rem;
+    width: 3rem;
+    background: color('whiteColor');
+  }
+
+  .btn {
+    position: relative;
+    @extend %btnHold;
+    margin-top: 2rem;
+    cursor: pointer;
+
+    @include respond(tab-portrate) {
+      margin: 0;
+      margin-right: 2rem;
+    }
+
+    &::before,
+    &::after {
+      content: '';
+      @extend %btnHold;
+      position: absolute;
+      z-index: 1;
+      left: 0;
+    }
+
+    &::before {
+      top: -0.7rem;
+    }
+
+    &::after {
+      top: 0.7rem;
+    }
+  }
+}

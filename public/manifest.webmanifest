@@ -1,0 +1,8 @@
+{
+  "short_name": "nexter",
+  "name": "Nexter",
+  "icons": [
+    { "src": "./favicon192.png", "type": "image/png", "size": "192x192" },
+    { "src": "./favicon512.png", "type": "image/png", "size": "512x512" }
+  ]
+}

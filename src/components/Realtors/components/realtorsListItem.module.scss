@@ -1,0 +1,33 @@
+@use '../../../styles/helpers/helpers' as *;
+
+.realtor {
+  @include flexBox;
+  @include flexProperty(flex-start, center);
+  gap: 1rem;
+
+  .image {
+    display: block;
+    width: 7rem;
+    aspect-ratio: 1/1;
+    border-radius: 50%;
+
+    @include respond(phone) {
+      width: 4rem;
+    }
+  }
+
+  // .realtorDetails {
+  // }
+
+  .userName {
+    color: color('whiteColor');
+    text-transform: capitalize;
+  }
+
+  .sold {
+    text-transform: uppercase;
+    color: color('greyColor');
+    margin-top: -0.3rem;
+    font-size: size('smallestSize');
+  }
+}

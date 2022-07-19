@@ -1,0 +1,75 @@
+@use '../../../styles/helpers/helpers' as *;
+
+.home {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  row-gap: 2rem;
+  border-radius: 0.25rem;
+  overflow: hidden;
+  color: color('darkGreyColor');
+  @include boxShadowBlack(2rem, 5rem, 0.2);
+
+  .image {
+    grid-area: 1 / 1 / 2 / -1;
+    z-index: 1;
+    width: 100%;
+    aspect-ratio: 2/1;
+  }
+
+  .heartIcon {
+    grid-area: 1 / 2 / 2 / 3;
+    justify-self: end;
+    z-index: 2;
+    margin: 1rem 1rem 0 0;
+    width: 2.5rem;
+    height: 2.5rem;
+    fill: color('brownTintColor-2');
+  }
+
+  .houseIcon {
+    width: 2rem;
+    height: 2rem;
+    fill: color('brownTintColor-2');
+  }
+
+  .title {
+    grid-area: 1 / 1 / 2 / -1;
+    align-self: end;
+    justify-self: center;
+    transform: translateY(50%);
+    z-index: 2;
+    padding: 1.25rem 3rem;
+    font-family: $font-display;
+    background: color('darkBlueColor');
+    color: color('whiteColor');
+    text-transform: capitalize;
+  }
+
+  .listItem {
+    @include flexBox;
+    @include flexProperty(flex-start, center);
+    gap: 1rem;
+    text-transform: capitalize;
+    margin-top: 2rem;
+    padding-left: 2rem;
+  }
+
+  .space {
+    justify-self: start;
+    position: relative;
+    text-transform: lowercase;
+  }
+
+  .cube {
+    position: absolute;
+    right: -0.5rem;
+    top: 0;
+    // font-size: size('smallestSize');
+    font-size: 0.75rem;
+  }
+
+  .button {
+    grid-column: 1/-1;
+    @include button;
+  }
+}

@@ -1,0 +1,16 @@
+@use '../../../styles/helpers/helpers' as *;
+
+.navList {
+  @include flexBox;
+  @include flexProperty(center, center);
+  flex-wrap: wrap;
+  gap: 2rem;
+  text-transform: capitalize;
+  height: auto;
+  min-height: 10rem;
+
+  @include respond(phone) {
+    gap: 1rem;
+    min-height: 5rem;
+  }
+}

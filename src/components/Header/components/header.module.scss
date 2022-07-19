@@ -1,0 +1,75 @@
+@use '../../../styles/helpers/helpers' as *;
+
+.header {
+  grid-area: 1 / full-start/2/col-end 6;
+  @include bgGradientImage('darkBlueColor', 'darkBlueColor', 'hero.jpeg', 0.95, 0.95);
+  background-size: cover;
+  background-position: center;
+  display: grid;
+  grid-template: 1fr repeat(3, min-content) 1fr min-content / repeat(1, 1fr);
+  row-gap: 1.5rem;
+  padding: 3rem;
+
+  @include respond(tab-portrate) {
+    grid-area: 2 / full-start / 3 / col-end 6;
+  }
+
+  @include respond(phone) {
+    grid-area: 2 / full-start / 3 / full-end;
+  }
+
+  .appLogo {
+    height: 3rem;
+    justify-self: center;
+  }
+
+  .heading {
+    @include heading-1;
+    font-size: size('headingSmallSize');
+    line-height: 1.2;
+    color: color('whiteColor');
+
+    &::first-letter {
+      text-transform: capitalize;
+    }
+
+    @include respond(tab-landscape) {
+      font-size: size('headingSmallerSize');
+    }
+
+    @include respond(tab-portrate) {
+      font-size: size('headingSecondarySize');
+    }
+
+    @include respond(phone) {
+      font-size: size('headingSecondarySmallSize');
+    }
+  }
+
+  .headingTertiary {
+    @include heading-3;
+  }
+
+  .btn {
+    @include button;
+    justify-self: start;
+  }
+
+  .seenOn {
+    align-self: end;
+    color: color('greyColor');
+    display: grid;
+    grid-template-columns: 1fr max-content 1fr;
+    align-items: center;
+    text-transform: capitalize;
+
+    &::before,
+    &::after {
+      content: '';
+      display: block;
+      margin: 0 1.5rem;
+      height: 1px;
+      background: currentColor;
+    }
+  }
+}

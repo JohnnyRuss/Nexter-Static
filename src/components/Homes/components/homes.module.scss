@@ -1,0 +1,21 @@
+@use '../../../styles/helpers/helpers' as *;
+
+.homes {
+  grid-area: 4 / center-start / 5 / center-end;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+  gap: 5rem;
+  margin: 15rem 0;
+
+  @include respond(big-desktop) {
+    margin: 10rem 0;
+  }
+
+  @include respond(tab-portrate) {
+    grid-area: 5 / center-start / 6 / center-end;
+  }
+
+  @include respond(phone) {
+    grid-area: 7 / center-start / 8 / center-end;
+  }
+}

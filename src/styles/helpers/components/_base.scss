@@ -1,0 +1,68 @@
+@use '../abstract/functions' as *;
+@use '../components/media' as *;
+@use '../abstract/mixins' as *;
+@use '../variables/variables' as *;
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+
+  @include respond(tab-landscape) {
+    font-size: 56.25%; // 1rem == 9px
+  }
+
+  @include respond(tab-portrate) {
+    font-size: 50%; // 1rem == 8px
+  }
+
+  @include respond(large-desktop) {
+    font-size: 75%; // 1rem == 12px
+  }
+}
+
+body {
+  font-size: size('regullarSize');
+  font-weight: weight('thinWeight');
+  line-height: 1.6;
+  font-family: $font-primary;
+  background: color('whiteColor');
+  color: color('brownTintColor-2');
+}
+
+@include scrollBar('body');
+
+a {
+  text-decoration: none;
+}
+
+button {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+a,
+input,
+button {
+  font-size: inherit;
+  color: inherit;
+  text-transform: inherit;
+  font-family: inherit;
+}
+
+ul {
+  list-style: none;
+}
+
+::selection {
+  background: color('brownTintColor-1');
+  color: color('whiteColor');
+}

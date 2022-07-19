@@ -1,0 +1,29 @@
+@use '../../../styles/helpers/helpers' as *;
+
+.realtors {
+  background: color('darkBlueColor');
+  grid-area: 1 / col-start 7 / 2 / full-end;
+  display: grid;
+  justify-content: center;
+  align-content: center;
+  row-gap: 2rem;
+  justify-items: center;
+  padding: 3rem;
+
+  @include respond(tab-portrate) {
+    grid-area: 2 / col-start 7 / 3 / full-end;
+  }
+
+  @include respond(phone) {
+    grid-area: 3 / full-start / 4 / full-end;
+    padding: 2rem 1rem;
+  }
+
+  .headingTertiary {
+    @include heading-3;
+
+    @include respond(phone) {
+      display: none;
+    }
+  }
+}

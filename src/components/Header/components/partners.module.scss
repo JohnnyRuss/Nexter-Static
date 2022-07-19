@@ -1,0 +1,16 @@
+@use '../../../styles/helpers/helpers' as *;
+
+.logos {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  align-items: center;
+  justify-items: center;
+  column-gap: 5rem;
+  row-gap: 3rem;
+
+  .logo {
+    max-height: 2.5rem;
+    max-width: 100%;
+    filter: brightness(70%);
+  }
+}

@@ -1,0 +1,54 @@
+@use '../variables/variables' as *;
+@use '../abstract/functions' as *;
+@use '../components//media' as *;
+
+%heading {
+  font-family: $font-display;
+  font-weight: weight('regullarWeight');
+}
+
+@mixin heading-1 {
+  @extend %heading;
+}
+
+@mixin heading-2 {
+  @extend %heading;
+  font-size: size('headingSecondarySize');
+  font-style: italic;
+  line-height: 1.2;
+}
+
+@mixin heading-3 {
+  @extend %heading;
+  font-size: size('regullarSize');
+  color: color(brownTintColor-2);
+  text-transform: uppercase;
+
+  @include respond(phone) {
+    font-size: size('smallSize');
+  }
+}
+
+@mixin heading-4 {
+  @extend %heading;
+  font-size: size('bigSize');
+}
+
+@mixin button {
+  background: color('brownTintColor-1');
+  font-size: size('regullarSize');
+  color: color('whiteColor');
+  font-family: $font-display;
+  text-transform: uppercase;
+  padding: 1.8rem 3rem;
+  transition: all 0.2s;
+
+  &:hover {
+    background: color('brownTintColor-2');
+  }
+
+  @include respond(phone) {
+    font-size: size('smallerSize');
+    padding: 1.5rem 2.5rem;
+  }
+}

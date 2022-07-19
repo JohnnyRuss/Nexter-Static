@@ -1,0 +1,24 @@
+@use '../../../styles/helpers/helpers' as *;
+
+.navListItem {
+  .navListItemLink {
+    &:link,
+    &:visited {
+      font-size: size('smallerSize');
+      padding: 1.5rem;
+      transition: all 0.2s;
+      display: inline-block;
+
+      @include respond(phone) {
+        padding: 1rem;
+      }
+    }
+
+    &:hover,
+    &:active {
+      text-decoration: underline;
+      background: rgba(color('whiteColor'), 0.05);
+      transform: translateY(-0.3rem);
+    }
+  }
+}

@@ -1,0 +1,42 @@
+@use '../../../styles/helpers/helpers' as *;
+
+.storyPictures {
+  color: color('whiteColor');
+  grid-area: 3 / full-start / 4 / col-end 4;
+  display: grid;
+  grid-template: repeat(6, 1fr) / repeat(6, 1fr);
+  align-items: center;
+  @include bgGradientImage('brownTintColor-1', 'brownShadeColor-2', 'back.jpg', 0.5, 0.5);
+
+  @include respond(tab-portrate) {
+    grid-area: 4 / full-start / 5 / col-end 4;
+  }
+
+  @include respond(phone) {
+    grid-area: 6 / full-start / 7 / full-end;
+    grid-template: repeat(6, 1fr) / repeat(7, 1fr);
+  }
+
+  .image {
+    width: 100%;
+    @include boxShadowBlack(2rem, 5rem, 0.1);
+
+    &--1 {
+      grid-area: 2 / 2 / -2 / -2;
+
+      @include respond(phone) {
+        grid-area: 2 / 2 / -2 / -3;
+      }
+    }
+
+    &--2 {
+      width: 110%;
+      grid-area: 3 / 4 / -1 / -1;
+
+      @include respond(phone) {
+        width: 100%;
+        grid-area: 2 / 4 / -1 / 7;
+      }
+    }
+  }
+}

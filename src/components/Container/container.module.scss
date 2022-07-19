@@ -1,0 +1,26 @@
+@use '../../styles/helpers/helpers' as *;
+
+.mainContainer {
+  display: grid;
+  grid-template:
+    40vw min-content 40vw repeat(3, min-content)
+    / [side-bar-start] 8rem [side-bar-end full-start] minmax(6rem, 1fr) [center-start] repeat(
+      8,
+      [col-start] minmax(min-content, 1fr) [col-end]
+    )
+    [center-end] minmax(6rem, 1fr) [full-end];
+
+  @include respond(tab-portrate) {
+    grid-template:
+      6rem 60vh min-content 40vw repeat(3, min-content)
+      / [full-start] minmax(6rem, 1fr) [center-start] repeat(
+        8,
+        [col-start] minmax(min-content, 1fr) [col-end]
+      )
+      [center-end] minmax(6rem, 1fr) [full-end];
+  }
+
+  @include respond(phone) {
+    grid-template-rows: 5rem 60vh repeat(3, min-content) 50vw repeat(3, min-content);
+  }
+}

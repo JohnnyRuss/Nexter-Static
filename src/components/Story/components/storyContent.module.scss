@@ -1,0 +1,48 @@
+@use '../../../styles/helpers/helpers' as *;
+
+.storyContent {
+  grid-area: 3 / col-start 5 / 4 / full-end;
+  padding: 6rem 6vw;
+  @include flexBox(column);
+  @include flexProperty(center, center);
+
+  @include respond(tab-portrate) {
+    grid-area: 4 / col-start 5 / 5 / full-end;
+  }
+
+  @include respond(phone) {
+    grid-area: 5 / full-start / 6 / full-end;
+    padding: 3rem 6vw 4rem;
+  }
+
+  .headingTertiary {
+    @include heading-3;
+    margin-bottom: 2rem;
+  }
+
+  .headingSecondary {
+    @include heading-2;
+    color: color('darkGreyColor');
+    margin-bottom: 4rem;
+    text-align: center;
+
+    &::first-letter {
+      text-transform: capitalize;
+    }
+
+    @include respond(phone) {
+      margin-bottom: 2rem;
+      font-size: size('headingSecondarySmallSize');
+    }
+  }
+
+  .text {
+    font-style: italic;
+    margin-bottom: 4rem;
+    @include hyphens;
+  }
+
+  .button {
+    @include button;
+  }
+}

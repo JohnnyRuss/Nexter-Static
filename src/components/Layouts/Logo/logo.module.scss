@@ -1,0 +1,13 @@
+@use '../../../styles/helpers/helpers' as *;
+
+.logoFigure {
+  display: inline-block;
+  height: 5rem;
+  margin-top: 0.5rem;
+  width: 10rem;
+
+  .logo {
+    @include fitImage;
+    object-fit: contain;
+  }
+}
