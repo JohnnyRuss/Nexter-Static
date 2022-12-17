@@ -6,7 +6,7 @@
   display: grid;
   grid-template: repeat(6, 1fr) / repeat(6, 1fr);
   align-items: center;
-  @include bgGradientImage('brownTintColor-1', 'brownShadeColor-2', 'back.jpg', 0.5, 0.5);
+  @include bgGradientImage('brownTintColor-1', 'brownShadeColor-2', 'back.webp', 0.5, 0.5);
 
   @include respond(tab-portrate) {
     grid-area: 4 / full-start / 5 / col-end 4;

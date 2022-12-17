@@ -3,19 +3,19 @@ export const realtors = [
     id: '022011',
     name: 'erik feiman',
     solds: '245',
-    img: '/assets/realtor-1.jpeg',
+    img: '/assets/realtor-1.webp',
   },
   {
     id: '022012',
     name: 'kim brown',
     solds: '212',
-    img: '/assets/realtor-2.jpeg',
+    img: '/assets/realtor-2.webp',
   },
   {
     id: '022013',
     name: 'toby kane',
     solds: '198',
-    img: '/assets/realtor-3.jpeg',
+    img: '/assets/realtor-3.webp',
   },
 ];
 
@@ -74,7 +74,7 @@ export const features = [
 
 export const availableHouses = [
   {
-    image: '/assets/house-1.jpeg',
+    image: '/assets/house-1.webp',
     title: 'beautifull family house',
     location: 'USA',
     rooms: '5',
@@ -83,7 +83,7 @@ export const availableHouses = [
     id: '0001',
   },
   {
-    image: '/assets/house-2.jpeg',
+    image: '/assets/house-2.webp',
     title: 'modern glass villa',
     location: 'canada',
     rooms: '6',
@@ -92,7 +92,7 @@ export const availableHouses = [
     id: '0002',
   },
   {
-    image: '/assets/house-3.jpeg',
+    image: '/assets/house-3.webp',
     title: 'cozy country house',
     location: 'UK',
     rooms: '4',
@@ -101,7 +101,7 @@ export const availableHouses = [
     id: '0003',
   },
   {
-    image: '/assets/house-4.jpeg',
+    image: '/assets/house-4.webp',
     title: 'Large Rustical Villa',
     location: 'portugal',
     rooms: '6',
@@ -110,7 +110,7 @@ export const availableHouses = [
     id: '0004',
   },
   {
-    image: '/assets/house-5.jpeg',
+    image: '/assets/house-5.webp',
     title: 'Majestic Palace House',
     location: 'germany',
     rooms: '18',
@@ -119,7 +119,7 @@ export const availableHouses = [
     id: '0005',
   },
   {
-    image: '/assets/house-6.jpeg',
+    image: '/assets/house-6.webp',
     title: 'Modern Familiy Apartment',
     location: 'italy',
     rooms: '3',
@@ -131,75 +131,75 @@ export const availableHouses = [
 
 export const galleryImages = [
   {
-    img: '/assets/gal-1.jpeg',
+    img: '/assets/gal-1.webp',
     id: '0101',
   },
   {
-    img: '/assets/gal-2.jpeg',
+    img: '/assets/gal-2.webp',
     id: '0102',
   },
   {
-    img: '/assets/gal-15.jpg',
+    img: '/assets/gal-15.webp',
     id: '01015',
   },
   {
-    img: '/assets/gal-3.jpeg',
+    img: '/assets/gal-3.webp',
     id: '0103',
   },
   {
-    img: '/assets/gal-4.jpeg',
+    img: '/assets/gal-4.webp',
     id: '0104',
   },
   {
-    img: '/assets/gal-5.jpeg',
+    img: '/assets/gal-5.webp',
     id: '0105',
   },
   {
-    img: '/assets/gal-6.jpeg',
+    img: '/assets/gal-6.webp',
     id: '0106',
   },
   {
-    img: '/assets/gal-7.jpeg',
+    img: '/assets/gal-7.webp',
     id: '0107',
   },
   {
-    img: '/assets/gal-18.jpg',
+    img: '/assets/gal-18.webp',
     id: '01018',
   },
   {
-    img: '/assets/gal-8.jpeg',
+    img: '/assets/gal-8.webp',
     id: '0108',
   },
   {
-    img: '/assets/gal-9.jpeg',
+    img: '/assets/gal-9.webp',
     id: '0109',
   },
   {
-    img: '/assets/gal-17.jpg',
+    img: '/assets/gal-17.webp',
     id: '01017',
   },
   {
-    img: '/assets/gal-10.jpeg',
+    img: '/assets/gal-10.webp',
     id: '01010',
   },
   {
-    img: '/assets/gal-11.jpeg',
+    img: '/assets/gal-11.webp',
     id: '01011',
   },
   {
-    img: '/assets/gal-16.jpg',
+    img: '/assets/gal-16.webp',
     id: '01016',
   },
   {
-    img: '/assets/gal-12.jpeg',
+    img: '/assets/gal-12.webp',
     id: '01012',
   },
   {
-    img: '/assets/gal-13.jpeg',
+    img: '/assets/gal-13.webp',
     id: '01013',
   },
   {
-    img: '/assets/gal-14.jpeg',
+    img: '/assets/gal-14.webp',
     id: '01014',
   },
 ];

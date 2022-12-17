@@ -2,7 +2,7 @@
 
 .header {
   grid-area: 1 / full-start/2/col-end 6;
-  @include bgGradientImage('darkBlueColor', 'darkBlueColor', 'hero.jpeg', 0.95, 0.95);
+  @include bgGradientImage('darkBlueColor', 'darkBlueColor', 'hero.webp', 0.95, 0.95);
   background-size: cover;
   background-position: center;
   display: grid;
