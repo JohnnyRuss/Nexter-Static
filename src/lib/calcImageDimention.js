@@ -1,6 +1,7 @@
 function calcImageDimention(src) {
   const el = document.createElement('img');
   el.setAttribute('src', src);
+  
   const { width, height } = el;
 
   if (height > width) return 'portrate';
