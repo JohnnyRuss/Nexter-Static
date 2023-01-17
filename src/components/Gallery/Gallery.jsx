@@ -1,6 +1,6 @@
-import styles from './components/gallery.module.scss';
-import GalleryItem from './components/GalleryItem';
-import { galleryImages } from '../../lib';
+import styles from "./components/gallery.module.scss";
+import GalleryItem from "./components/GalleryItem";
+import { galleryImages } from "../../lib";
 
 function Gallery() {
   return (
