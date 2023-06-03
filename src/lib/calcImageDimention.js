@@ -1,12 +1,26 @@
-function calcImageDimention(src) {
-  const el = document.createElement("img");
-  el.setAttribute("src", src);
+function calcImageDimention() {
+  const galleryImageFigures = Array.from(
+    document.querySelectorAll(".gallery-img ")
+  );
 
-  const { width, height } = el;
+  galleryImageFigures[0] &&
+    galleryImageFigures.forEach((fig) => {
+      const imgNode = fig.querySelector("img");
+      const img = document.createElement("img");
+      img.setAttribute("src", imgNode?.src || "");
 
-  if (height > width) return "portrate";
-  else if (width / height < 1.7) return "landscape";
-  else if (width / height > 1.7) return "landscapeLarge";
+      img.addEventListener("load", function (e) {
+        if (!e.target) return;
+
+        const { width, height } = e.target;
+
+        if (height > width) fig.classList.add("gallery-img--portrate");
+        else if (width / height < 1.7)
+          fig.classList.add("gallery-img--landscape");
+        else if (width / height > 1.7)
+          fig.classList.add("gallery-img--landscapeLarge");
+      });
+    });
 }
 
 export default calcImageDimention;
